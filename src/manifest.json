@@ -21,8 +21,6 @@
                 "*://*/*"
             ],
             "js": [
-                "./jquery.min.js",
-                "./toasty.js",
                 "./content.js"
             ],
             "css": [
