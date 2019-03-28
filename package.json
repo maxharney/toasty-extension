@@ -1,0 +1,10 @@
+{
+  "name": "toasty-extension",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Max Harney",
+  "license": "MIT",
+  "devDependencies": {}
+}

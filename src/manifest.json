@@ -1,0 +1,38 @@
+{
+    "manifest_version": 2,
+    "name": "Toasty Extension",
+    "description": "",
+    "version": "1.0.0",
+    "icons": {
+        "48": "./icon.png"
+    },
+    "permissions": [
+        "tabs"
+    ],
+    "browser_action": {
+        "default_icon": "./icon.png"
+    },
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "./jquery.min.js",
+                "./toasty.js",
+                "./content.js"
+            ],
+            "css": [
+                "./toasty.css"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "web_accessible_resources": [
+        "toasty.mp3",
+        "toasty.png"
+    ]
+}
