@@ -1,16 +1,15 @@
 {
     "manifest_version": 2,
     "name": "Toasty Extension",
-    "description": "",
+    "description": "Show the toasty easter egg from Mortal Kombat",
     "version": "1.0.0",
     "icons": {
-        "48": "./icon.png"
+        "48": "./images/icon48.png",
+        "128": "./images/icon128.png"
     },
-    "permissions": [
-        "tabs"
-    ],
+    "permissions": [],
     "browser_action": {
-        "default_icon": "./icon.png"
+        "default_icon": "./images/browser_action_icon.png"
     },
     "background": {
         "scripts": ["background.js"]
@@ -30,7 +29,7 @@
         }
     ],
     "web_accessible_resources": [
-        "toasty.mp3",
-        "toasty.png"
+        "sounds/toasty.mp3",
+        "images/toasty.png"
     ]
 }
