@@ -7,29 +7,19 @@
         "48": "./images/icon48.png",
         "128": "./images/icon128.png"
     },
-    "permissions": [],
+    "permissions": [
+        "activeTab"
+    ],
     "browser_action": {
         "default_icon": "./images/browser_action_icon.png"
     },
     "background": {
         "scripts": ["background.js"]
     },
-    "content_scripts": [
-        {
-            "matches": [
-                "*://*/*"
-            ],
-            "js": [
-                "./content.js"
-            ],
-            "css": [
-                "./toasty.css"
-            ],
-            "run_at": "document_start"
-        }
-    ],
     "web_accessible_resources": [
         "sounds/toasty.mp3",
-        "images/toasty.png"
+        "images/toasty.png",
+        "toasty.css",
+        "toasty.js"
     ]
 }

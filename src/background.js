@@ -1,4 +1,14 @@
-chrome.browserAction.onClicked.addListener(function(tab) {
-    msg={txt: 'toasty'};
-    chrome.tabs.sendMessage(tab.id, msg);
+chrome.browserAction.onClicked.addListener(function (tab) {
+    chrome.tabs.insertCSS(
+        tab.id,
+        {
+            file: 'toasty.css'
+        },
+        function () {
+            tab.cssInserted = true;
+            chrome.tabs.executeScript(tab.id, {
+                file: 'toasty.js'
+            });
+        }
+    );
 });
